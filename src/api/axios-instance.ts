@@ -4,6 +4,7 @@ const baseURL = "https://swapi.dev/api";
 
 export const getAxiosInstance = (): AxiosInstance => {
   let axiosInstance = axios.create({ baseURL: baseURL });
+
   axiosInstance.interceptors.response.use(
     (response) => response,
     (error) => {
